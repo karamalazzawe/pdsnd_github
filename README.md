@@ -16,3 +16,5 @@ washington.csv      Data file
 
 Credits:
 Udacity python course.
+Karam Al-Azzawe - Programer
+Unknown - Udacity code reviewer
