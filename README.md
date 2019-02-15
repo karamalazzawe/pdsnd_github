@@ -1,15 +1,18 @@
-### Date created
-Include the date you created this project and README file.
+### 02/10/2019
+Bike share code 02/10/2019
+Readme file 02/15/2019
 
-### Project Title
-Replace the Project Title
+### Bikeshare
+Bikeshare
 
 ### Description
-Describe what your project is about and what it does
+simple pyhton code to calculate the data taken from the csv files and returning statistical result base on the user input.
 
 ### Files used
-Include the files used
+Bikeshare.py        Code
+Chicago.csv         Data file
+new_york_city.csv   Data file
+washington.csv      Data file
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+Udacity python course.
