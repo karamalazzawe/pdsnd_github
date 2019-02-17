@@ -131,9 +131,17 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
-        # Missing a if Condition
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
-        if restart.lower() != 'yes':
+
+    raw_data = input('\nWould you like to see 5 rows of raw data? y or n: ').lower()
+    if raw_data != 'n':
+        i = 0
+        print(df.iloc[i:i+5])
+        restart1 = input('\nWould you like to restart? Enter yes or no. \n')
+        if restart1.lower() != 'yes':
+            break
+    else:
+        restart2 = input('\nWould you like to restart? Enter yes or no. \n')
+        if restart2.lower() != 'yes':
             break
 
 if __name__ == "__main__":
