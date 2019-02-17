@@ -107,8 +107,11 @@ def user_stats(df):
     print('\nCounts of user types:\n', user_types)
     # need if/else condition
    # TO DO: Display counts of gender
-    gender_type = df['Gender'].value_counts()
-    print('\nCounts for each gender type:\n',gender_type)
+    if 'Gender' in df.columns:
+        gender_type = df['Gender'].value_counts()
+        print('\nCounts for each gender type:\n',gender_type)
+    else:
+        print("No Gender data available for Washington.")
 
     # need if condition
    # TO DO: Display earliest, most recent, and most common year of birth
@@ -131,9 +134,17 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
-        # Missing a if Condition
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
-        if restart.lower() != 'yes':
+
+    raw_data = input('\nWould you like to see 5 rows of raw data? y or n: ').lower()
+    if raw_data != 'n':
+        i = 0
+        print(df.iloc[i:i+5])
+        restart1 = input('\nWould you like to restart? Enter yes or no. \n')
+        if restart1.lower() != 'yes':
+            break
+    else:
+        restart2 = input('\nWould you like to restart? Enter yes or no. \n')
+        if restart2.lower() != 'yes':
             break
 
 if __name__ == "__main__":
