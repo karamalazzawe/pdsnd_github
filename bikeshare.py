@@ -107,8 +107,11 @@ def user_stats(df):
     print('\nCounts of user types:\n', user_types)
     # need if/else condition
    # TO DO: Display counts of gender
-    gender_type = df['Gender'].value_counts()
-    print('\nCounts for each gender type:\n',gender_type)
+    if 'Gender' in df.columns:
+        gender_type = df['Gender'].value_counts()
+        print('\nCounts for each gender type:\n',gender_type)
+    else:
+        print("No Gender data available for Washington.")
 
     # need if condition
    # TO DO: Display earliest, most recent, and most common year of birth
